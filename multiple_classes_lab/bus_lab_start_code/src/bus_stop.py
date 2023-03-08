@@ -16,4 +16,4 @@ class BusStop:
     def clear_queue(self):
         self.queue.clear()
 
-    
+    # all of these self.words and functions can be called by .name

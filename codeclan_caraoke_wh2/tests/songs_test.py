@@ -9,9 +9,8 @@ class TestSongs(unittest.TestCase):
         self.song_4 = Songs("You Oughta Know", "Alanis Morissette")
         self.song_5 = Songs("River", "Joni Mitchell")
         self.song_6 = Songs("Toungescraper I & II", "Desalvo")
-        # self.song_7 = Songs("Basscadet", "Autechre")
+        self.song_7 = Songs("Basscadet", "Autechre")
 
-        # Create rooms, songs and guests
 
     def test_song_name(self):
         self.assertEqual("Song 2", self.song_2.name)

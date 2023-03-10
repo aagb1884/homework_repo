@@ -22,8 +22,11 @@ class Pub:
                     customer.buy_drink(drink)
         # doesnt just increase till but also takes customer and 
         # uses 'customer.buy_drink'
+        # one complicated function is harder to test
+        # break down into smaller functions
 
     def check_age(self, customer):
         if customer.age >= 18:
             return True
         else: False
+# don't need to return true or false here, implied

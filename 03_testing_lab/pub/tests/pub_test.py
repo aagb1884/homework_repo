@@ -11,6 +11,8 @@ class TestPub(unittest.TestCase):
         self.drink = Drink("Beer", 3.00, 20)
         self.customer = Customer("Jammo", 10.00, 21, 0)
 
+# can set up basic shop to test and fully stocked one for later
+
     def test_pub_name(self):
         self.assertEqual("The Crass Badger", self.pub.name)
 

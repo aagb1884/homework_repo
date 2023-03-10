@@ -9,3 +9,8 @@ class Customer:
         self.wallet -= drink.price
         self.drunkenness += drink.alcohol_level
 
+    def buy_food(self,food):
+        self.wallet -= food.price
+        self.drunkenness -= food.rejuvenation_level
+
+# second simplest, does stuff, takes in drink object

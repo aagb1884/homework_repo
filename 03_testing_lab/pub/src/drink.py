@@ -4,3 +4,4 @@ class Drink:
         self.price = price
         self.alcohol_level = alcohol_level
         
+# simplest one, doesn't do anything, no functions

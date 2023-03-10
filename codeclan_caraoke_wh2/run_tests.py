@@ -1,16 +1,8 @@
-```python
+
 import unittest
-from tests.guest_test import TestGuest
-from tests.room_test import TestRoom
-from tests.song_test import TestSong
+from tests.guests_tests import TestGuests
+from tests.rooms_test import TestRooms
+from tests.songs_test import TestSongs
 
 if __name__ == '__main__':
     unittest.main()
-```
-
-4. Create a ``` tests ``` directory and a ``` classes ``` directory.
-5. To run the tests in Terminal type
-
-```bash 
-python3 run_tests.py
-```

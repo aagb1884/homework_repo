@@ -9,8 +9,7 @@ class TestVenue(unittest.TestCase):
         
         self.room_1 = Rooms("Mellow Vibes", 4)
         self.room_2 = Rooms("Power Balladsladslads", 6)
-        self.room_3 = Rooms("Broken Air Conditioning", 8)
-        self.room_list = [self.room_1, self.room_2, self.room_3]
+        self.room_3 = Rooms("Broken Air Conditioning", 8)    
 
         self.song_1 = Songs("Undone (The Sweater Song)", "Weezer")
         self.song_2 = Songs("Song 2", "Blur")
@@ -70,4 +69,7 @@ class TestVenue(unittest.TestCase):
         # to check guest into room need room and guest
         # once guest added to room should be part of room so
         # just refer to room
+
+
+
         

@@ -30,6 +30,10 @@ class TestRooms(unittest.TestCase):
         self.guest_10 = Guests("Omega")
         self.guest_11 = Guests("Rassilon")
         self.guest_12 = Guests("Tecteun")
+        self.everyone = [self.guest_1, self.guest_2, self.guest_3,
+                         self.guest_4, self.guest_5, self.guest_6,
+                         self.guest_7, self.guest_8, self.guest_9,
+                         self.guest_10, self.guest_11, self.guest_12]
 
     def test_room_name(self):
         self.assertEqual("Mellow Vibes", self.room_1.name)
@@ -54,3 +58,11 @@ class TestRooms(unittest.TestCase):
         self.room_2.add_song_to_room(self.song_5)
         self.assertEqual(1, len(self.room_2.songlist))
         
+    def test_capacity_reached(self):
+        self.room_1.add_guest_to_room(self.guest_12)
+        self.room_1.add_guest_to_room(self.guest_11)
+        self.room_1.add_guest_to_room(self.guest_10)
+        self.room_1.add_guest_to_room(self.guest_9)
+        self.assertEqual(4, len(self.room_1.guestlist))
+        self.room_1.add_guest_to_room(self.guest_8)
+        self.assertEqual(4, len(self.room_1.guestlist))

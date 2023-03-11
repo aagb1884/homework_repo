@@ -1,13 +1,14 @@
 class Venue:
-    def __init__(self, name, room_list, guests, songs):
+    def __init__(self, name):
         self.name = name
-        self.room_list = room_list
-        self.guests = guests
-        self.songs = songs
+        self.rooms = []
+        self.guests = []
+        self.songs = []
 
 
 # - Check in guests to rooms/Check out guests from rooms
 # - Add songs to rooms
+# who would be doing that irl? venue. so create venue.
 
 # to check guests into/out of room
 # need guest name

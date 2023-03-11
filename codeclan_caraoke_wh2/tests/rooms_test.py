@@ -11,7 +11,7 @@ class TestRooms(unittest.TestCase):
         self.room_list = [self.room_1, self.room_2, self.room_3]
 
         self.song_1 = Songs("Undone (The Sweater Song)", "Weezer")
-        self.song_2 = Songs("Song 2", "Blur")
+        self.song_2 = Songs("Tame", "The Pixies")
         self.song_3 = Songs("Angels", "Robbie Williams")
         self.song_4 = Songs("You Oughta Know", "Alanis Morissette")
         self.song_5 = Songs("River", "Joni Mitchell")
@@ -48,3 +48,9 @@ class TestRooms(unittest.TestCase):
         self.assertEqual(1, len(self.room_3.guestlist))
         self.room_3.remove_guest_from_room(self.guest_12)
         self.assertEqual(0, len(self.room_3.guestlist))
+
+    def test_add_song_to_room(self):
+        self.assertEqual(0, len(self.room_2.songlist))
+        self.room_2.add_song_to_room(self.song_5)
+        self.assertEqual(1, len(self.room_2.songlist))
+        

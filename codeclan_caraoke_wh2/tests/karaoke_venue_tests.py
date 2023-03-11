@@ -58,7 +58,11 @@ class TestVenue(unittest.TestCase):
         self.venue.check_guest_into_venue(self.guest_1)
         self.assertEqual(1, len(self.venue.guests))
    
-
+    def test_remove_guest_from_venue(self):
+        self.venue.check_guest_into_venue(self.guest_1)
+        self.assertEqual(1, len(self.venue.guests))
+        self.venue.remove_guest_from_venue(self.guest_1)
+        self.assertEqual(0, len(self.venue.guests))
 
         # add rooms to list, references in tests above for that.
         # add guestlist to rooms.py so guests can be added/counted

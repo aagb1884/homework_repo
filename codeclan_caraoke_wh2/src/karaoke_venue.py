@@ -17,5 +17,5 @@ class Venue:
     def check_guest_into_venue(self, name):
         self.guests.append(name)
 
-    def room_guest_count(self):
-        return len(self.guests)
+    def remove_guest_from_venue(self, name):
+        self.guests.remove(name)

@@ -1,8 +1,10 @@
 class Venue:
-    def __init__(self, name, rooms):
+    def __init__(self, name, rooms, till, entry_fee):
         self.name = name
         self.rooms = rooms
         self.guests = []
+        self.till = till
+        self.entry_fee = entry_fee
 
 # - Check in guests to rooms/Check out guests from rooms
 # - Add songs to rooms

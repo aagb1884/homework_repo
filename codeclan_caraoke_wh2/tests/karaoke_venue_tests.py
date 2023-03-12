@@ -1,12 +1,11 @@
 import unittest
 from src.karaoke_venue import *
 from src.rooms import Rooms
-from src.guests import Guests
+from src.guests import *
 from src.songs import Songs
 
 class TestVenue(unittest.TestCase):
-    def setUp(self):
-        
+    def setUp(self):  
         self.room_1 = Rooms("Mellow Vibes", 4)
         self.room_2 = Rooms("Power Balladsladslads", 6)
         self.room_3 = Rooms("Broken Air Conditioning", 8)    
@@ -76,5 +75,10 @@ class TestVenue(unittest.TestCase):
 
     def test_entry_fee(self):
         self.assertEqual(3, self.venue.entry_fee)
+
+    def test_sell_entry(self):
+        self.venue.sell_entry(self.venue.entry_fee, self.guest_1)
+        self.assertEqual(103.00, self.venue.till)
+        self.assertEqual(7.00, self.guest_1.wallet)
 
         

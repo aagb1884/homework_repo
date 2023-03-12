@@ -14,7 +14,7 @@ Your program should be test driven and should be able to:
 
 <!-- - What happens if there are more guests trying to be checked in than there is free space in the room? -->
 <!-- once capacity is reached no more people can enter room -->
-- Karaoke venues usually have an entry fee - So the guests could have money so they can pay it.
+<!-- - Karaoke venues usually have an entry fee - So the guests could have money so they can pay it. -->
 <!-- venues have float/till, guests have wallets -->
 
 

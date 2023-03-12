@@ -22,7 +22,7 @@ class Venue:
     def remove_guest_from_venue(self, name):
         self.guests.remove(name)
 
-    # def sell_entry(self, entry_fee, customer):
-    #         if customer.wallet >= entry_fee
-    #                 self.till += drink.price
-    #                 customer.buy_drink(drink)
+    def sell_entry(self, entry_fee, guest):
+            if guest.wallet >= entry_fee:
+                    self.till += entry_fee
+                    guest.pay_entry(entry_fee)

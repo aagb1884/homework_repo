@@ -4,7 +4,7 @@ from src.karaoke_venue import *
 
 class TestGuests(unittest.TestCase):
     def setUp(self):
-     self.guest_1 = Guests("Lewis", 10)
+     self.guest_1 = Guests("Lewis", 10, "Toungescraper I & II")
 
      def test_guest_name(self):
          self.assertEqual("Lewis", self.guest_1.name)
@@ -20,3 +20,5 @@ class TestGuests(unittest.TestCase):
         self.guest_1.pay_entry(self.venue.entry_fee)
         self.assertEqual(7, self.guest_1.wallet)
         
+    def test_fave_song(self):
+        self.assertEqual("Toungescraper I & II", self.guest_1.fave_song)

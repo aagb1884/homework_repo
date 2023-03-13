@@ -1,10 +1,12 @@
 import unittest
 from src.guests import *
 from src.karaoke_venue import *
+from src.rooms import *
 
 class TestGuests(unittest.TestCase):
     def setUp(self):
      self.guest_1 = Guests("Lewis", 10, "Toungescraper I & II")
+     self.room_1 = Rooms("Mellow Vibes", 4)
 
      def test_guest_name(self):
          self.assertEqual("Lewis", self.guest_1.name)
@@ -22,3 +24,5 @@ class TestGuests(unittest.TestCase):
         
     def test_fave_song(self):
         self.assertEqual("Toungescraper I & II", self.guest_1.fave_song)
+
+    

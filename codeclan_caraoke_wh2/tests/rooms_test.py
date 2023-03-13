@@ -53,6 +53,9 @@ class TestRooms(unittest.TestCase):
         self.room_3.remove_guest_from_room(self.guest_12)
         self.assertEqual(0, len(self.room_3.guestlist))
 
+    # consider, in future, adding guards so can't remove guests
+    # who ARE NOT THERE - ie. EMPTY room
+
     def test_add_song_to_room(self):
         self.assertEqual(0, len(self.room_2.songlist))
         self.room_2.add_song_to_room(self.song_5)
@@ -66,3 +69,6 @@ class TestRooms(unittest.TestCase):
         self.assertEqual(4, len(self.room_1.guestlist))
         self.room_1.add_guest_to_room(self.guest_8)
         self.assertEqual(4, len(self.room_1.guestlist))
+
+    # def test_fave_song_reaction(self):
+    #     self.assertEqual("Whoo!", self.guest_1.fave_song_reaction(self.guest_1.fave_song))
